@@ -153,6 +153,7 @@ dnl *************************
 dnl *** Check for plugins ***
 dnl *************************
 TUMBLER_COVER_THUMBNAILER()
+TUMBLER_COMICBOOK_THUMBNAILER()
 TUMBLER_FONT_THUMBNAILER()
 TUMBLER_JPEG_THUMBNAILER()
 TUMBLER_PIXBUF_THUMBNAILER()
@@ -188,6 +189,7 @@ docs/reference/tumbler/Makefile
 docs/reference/tumbler/version.xml
 plugins/Makefile
 plugins/cover-thumbnailer/Makefile
+plugins/comicbook-thumbnailer/Makefile
 plugins/font-thumbnailer/Makefile
 plugins/gst-thumbnailer/Makefile
 plugins/jpeg-thumbnailer/Makefile
@@ -224,6 +226,11 @@ if test x"$ac_tumbler_cover_thumbnailer" = x"yes"; then
 echo "  * Cover thumbnailer plugin:                         yes"
 else
 echo "  * Cover thumbnailer plugin:                         no"
+fi
+if test x"$ac_tumbler_comicbook_thumbnailer" = x"yes"; then
+echo "  * Comicbook Archive thumbnailer plugin:             yes"
+else
+echo "  * Comicbook Archive thumbnailer plugin:             no"
 fi
 if test x"$ac_tumbler_font_thumbnailer" = x"yes"; then
 echo "  * FreeType font thumbnailer plugin:                 yes"

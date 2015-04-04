@@ -19,6 +19,7 @@
 
 SUBDIRS =								\
 	cover-thumbnailer						\
+	comicbook-thumbnailer						\
 	font-thumbnailer						\
 	gst-thumbnailer							\
 	jpeg-thumbnailer						\

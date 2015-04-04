@@ -256,6 +256,27 @@ AC_MSG_RESULT([$ac_tumbler_cover_thumbnailer])
 
 
 
+dnl TUMBLER_COMICBOOK_THUMBNAILER()
+dnl
+dnl Check whether to build and install the Comicbook Archive thumbnailer plugin.
+dnl
+AC_DEFUN([TUMBLER_COMICBOOK_THUMBNAILER],
+[
+AC_ARG_ENABLE([comicbook-thumbnailer], [AC_HELP_STRING([--disable-comicbook-thumbnailer], [Don't build the Comicbook Archive thumbnailer plugin])],
+  [ac_tumbler_comicbook_thumbnailer=$enableval], [ac_tumbler_comicbook_thumbnailer=yes])
+if test x"$ac_tumbler_comicbook_thumbnailer" = x"yes"; then
+  dnl Check for gdk-pixbuf
+  PKG_CHECK_MODULES([GDK_PIXBUF], [gdk-pixbuf-2.0 >= 2.14],
+  [ac_tumbler_comicbook_thumbnailer=no])
+fi
+
+AC_MSG_CHECKING([whether to build the Comicbook Archive thumbnailer plugin])
+AM_CONDITIONAL([TUMBLER_COMICBOOK_THUMBNAILER], [test x"$ac_tumbler_comicbook_thumbnailer" = x"yes"])
+AC_MSG_RESULT([$ac_tumbler_comicbook_thumbnailer])
+])
+
+
+
 dnl TUMBLER_XDG_CACHE()
 dnl
 dnl Check whether to build and install the freedesktop.org cache plugin.

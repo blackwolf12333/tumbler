@@ -32,6 +32,7 @@ Tumbler can optionally use the following packages:
   * FreeType 2.x (for a font thumbnailer plugin)
   * libpng >= 1.2.0 (for the Thumbnail Managing Standard storage 
     backend, gdk-pixbuf-2.0 is also required for this)
+  * libarchive (for a comicbook thumbnailer plugin)
 
 
 Installation
